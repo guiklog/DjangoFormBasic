@@ -1,5 +1,12 @@
-<form action="/index/" method="post">
+<!DOCTYPE html>
+<html>
+<head>
+<title>Basic Subscription Form</title>
+
+<form method="POST">
     {% csrf_token %}
-    {{ form }}
+    {{ form.as_p }}
     <input type="submit" value="Submit">
 </form>
+
+</html>

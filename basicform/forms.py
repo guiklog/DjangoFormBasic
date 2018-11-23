@@ -6,3 +6,11 @@ class basicform(ModelForm):
     class Meta:
         model = basicform
         fields = '__all__'
+        localized_fields = ('phone',)
+        
+    def checkBoxIsNotTrue(self):
+        data = self.cleaned_data['checkbox']
+        if data == False:
+            raise forms.ValidationError("You must accept to be contated again to submit the form")
+
+        return data

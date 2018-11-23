@@ -14,10 +14,19 @@ def index(request):
         form = basicform(request.POST)
         if form.is_valid():
             
-            return HttpResponseRedirect('/thanks/')
+            form.checkBoxIsNotTrue()
+            
+            new_contact = form.save()
+            
+            return HttpResponseRedirect('/form/thanks')
             
     else:
         form = basicform()
     
     
     return render(request, 'basicform/index.html', {'form': form})
+    
+
+def thanks(request):
+
+    return render(request, 'basicform/thanks.html')

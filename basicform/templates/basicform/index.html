@@ -4,6 +4,8 @@
 <title>Basic Subscription Form</title>
 
 <form method="POST">
+    {{ form.non_field_errors }}
+    {{ form.message.checkbox }}
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Submit">
