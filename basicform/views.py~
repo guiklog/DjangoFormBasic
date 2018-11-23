@@ -1,7 +1,23 @@
-from django.urls import path
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from .forms import basicform
 
-from . import views
+# Create your views here.
 
-urlpatterns = [
-    path('', views.index, name='index'),
-]
+
+from django.http import HttpResponse
+
+
+def index(request):
+    
+    if request.method == 'POST':
+        form = basicform(request.POST)
+        if form.is_valid():
+            
+            return HttpResponseRedirect('/form/')
+            
+    else:
+        form = basicform()
+    
+    
+    return render(request, 'basicform/index.html', {'form': form})

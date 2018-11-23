@@ -8,8 +8,8 @@ class basicform(models.Model):
     email = models.EmailField(max_length=50)
     phone = models.CharField(max_length=50)
     subject = models.CharField(max_length = 255)
-    message = models.TextField
-    checkbox =models.BooleanField
+    message = models.TextField(default = 'Your message')
+    checkbox =models.BooleanField(default = True)
     
     
     
