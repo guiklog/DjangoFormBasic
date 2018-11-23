@@ -11,6 +11,6 @@ class basicform(ModelForm):
     def checkBoxIsNotTrue(self):
         data = self.cleaned_data['checkbox']
         if data == False:
-            raise forms.ValidationError("You must accept to be contated again to submit the form")
+            raise forms.ValidationError("You must accept to be contacted again to submit the form")
 
         return data
