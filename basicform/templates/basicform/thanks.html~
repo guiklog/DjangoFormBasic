@@ -1,4 +1,4 @@
 <h1>Thanks for completing the form</h1>
 
-<h3>Message confirmation sent to Google pub/sub :</h3>
+<h3>Message confirmation send to Google pub/sub :</h3>
 <p>{{ printmsg }}</p>

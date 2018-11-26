@@ -11,7 +11,7 @@ import os
 from django.http import HttpResponse
 
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/var/www/html/djangotest/djangotest/djangotest/techtest.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/var/www/html/djangotest/djangotest/techtest.json"
 
 def index(request):
     
